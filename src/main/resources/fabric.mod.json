@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "pvp-rl-env",
+	"version": "${version}",
+	"name": "PvP RL Environment",
+	"description": "Turns Minecraft into a reinforcement-learning environment for PvP sword combat. Exposes structured JSON observations, rewards, and a discrete action space over a WebSocket interface.",
+	"authors": [
+		"pvp-rl-env"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/example/pvp-rl-env"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/pvp-rl-env/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.pvprl.PvpRlEnv"
+		],
+		"client": [
+			"com.pvprl.PvpRlEnvClient"
+		]
+	},
+	"mixins": [
+		"pvp-rl-env.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
